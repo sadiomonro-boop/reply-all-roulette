@@ -8,11 +8,13 @@
 // grader runs produce the same file byte for byte.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// Winner of the blind test (see BUILD-REPORT.json for the full table):
-// beat all 4 rival lines (mean score 0.713, 4/4 wins) and beat the
-// runner-up head-to-head 0.80. 86 characters, single line.
+// Winner of the temperature-0 confirmation round (see BUILD-REPORT.json
+// for the full tables): beat the previous winner C8 head-to-head on the
+// primary proxy (deepseek 0.70, both orders at margin 2; level 0.50 on the
+// second proxy, Gemini) and won the deepseek round-robin 4/4 (mean 0.738).
+// 85 characters, single line.
 const JOKE =
-  "My performance review says I need to be more visible in meetings. So now I nod louder.";
+  "My performance review says I need to be more visible in standup. So now I nod louder.";
 
 const OUT_DIR = "/output";
 const OUT_FILE = `${OUT_DIR}/entry.txt`;
